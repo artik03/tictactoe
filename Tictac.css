@@ -1,0 +1,136 @@
+body {
+  background: #343434;
+  color: #d6d6d6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+  text-align: center;
+}
+span {
+  font-weight: bold;
+  color: #da8815; /* #15C9DA */
+}
+#container {
+  display: grid;
+  width: 72vmin;
+  height: 72vmin;
+  margin: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  column-gap: 7px;
+  row-gap: 7px;
+}
+.item {
+  border: solid #d6d6d6 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*text-align: center;*/
+  font-size: 18vmin;
+  padding: 0;
+  color: #d6d6d6;
+  cursor: pointer;
+}
+hr {
+  position: relative;
+  width: 69vmin;
+  height: 1vmin;
+  background-color: #d6d6d6;
+  border: 0;
+  margin: 0 auto 0 auto;
+  visibility: hidden;
+}
+#win1 {
+  visibility: visible;
+  bottom: 60vmin;
+}
+#win2 {
+  visibility: visible;
+  bottom: 36vmin;
+}
+#win3 {
+  visibility: visible;
+  bottom: 12vmin;
+}
+#win4 {
+  visibility: visible;
+  bottom: 36vmin;
+  right: 24vmin;
+  transform: rotate(90deg);
+}
+#win5 {
+  visibility: visible;
+  bottom: 36vmin;
+  transform: rotate(90deg);
+}
+#win6 {
+  visibility: visible;
+  bottom: 36vmin;
+  left: 24vmin;
+  transform: rotate(90deg);
+}
+#win7 {
+  visibility: visible;
+  width: 90vmin;
+  bottom: 36vmin;
+  transform: rotate(45deg);
+}
+#win8 {
+  visibility: visible;
+  width: 90vmin;
+  bottom: 36vmin;
+  transform: rotate(-45deg);
+}
+
+@keyframes winnerAnime {
+  0% {
+    border-color: #f8fc03;
+  }
+  50% {
+    border-color: #f73859;
+  }
+  100% {
+    border-color: #00adb5;
+  }
+}
+.animateClass {
+  animation-name: winnerAnime;
+  animation-direction: alternate;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+.result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#resultText {
+  display: none;
+}
+
+button {
+  margin-top: 15px;
+  background-color: #d6d6d6;
+  border: none;
+  color: #343434;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition: 0.3s ease-out;
+}
+button:hover {
+  background-color: #afafaf;
+  color: #121212;
+  border: 5px solid #e4e4e4;
+  cursor: pointer;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2vmin;
+}
